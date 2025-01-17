@@ -1,0 +1,9 @@
+services:
+  magic-pdf-service:
+    build: .
+    image: diegocaples/doc-convert-server:latest
+    ports:
+      - "18812:18812"
+    # volumes:
+    #   - ./magic-pdf.json:/app/magic-pdf.json
+    restart: unless-stopped
